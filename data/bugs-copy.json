@@ -1,0 +1,75 @@
+[
+    {
+      "_id": "abc123",
+      "title": "Cannot save a new car",
+      "description": "Problem when clicking Save",
+      "severity": 3,
+      "createdAt": 1542107359454
+    },
+    {
+      "_id": "def456",
+      "title": "Error loading dashboard",
+      "description": "Dashboard does not load after login",
+      "severity": 2,
+      "createdAt": 1542107458457
+    },
+    {
+      "_id": "ghi789",
+      "title": "Car image not displaying",
+      "description": "Car image is missing on the details page",
+      "severity": 1,
+      "createdAt": 1542107557319
+    },
+    {
+      "_id": "jkl012",
+      "title": "Search feature not working",
+      "description": "Search bar returns no results",
+      "severity": 4,
+      "createdAt": 1542107656191
+    },
+    {
+      "_id": "mno345",
+      "title": "Cannot update car details",
+      "description": "Error occurs when trying to edit car details",
+      "severity": 3,
+      "createdAt": 1542107754973
+    },
+    {
+      "_id": "pqr678",
+      "title": "Add to cart button not responding",
+      "description": "Clicking Add to Cart does nothing",
+      "severity": 5,
+      "createdAt": 1542107853855
+    },
+    {
+      "_id": "stu901",
+      "title": "Profile picture upload failure",
+      "description": "Profile picture fails to upload after selecting a file",
+      "severity": 2,
+      "createdAt": 1542107952737
+    },
+    {
+      "_id": "vwx234",
+      "title": "Payment gateway not working",
+      "description": "Error when trying to process payment",
+      "severity": 4,
+      "createdAt": 1542108051619
+    },
+    {
+      "_id": "yzab567",
+      "title": "Car rental feature not visible",
+      "description": "Car rental option not appearing on the home page",
+      "severity": 1,
+      "createdAt": 1542108150501
+    },
+    {
+      "_id": "cdef890",
+      "title": "Slow loading times",
+      "description": "Pages take too long to load",
+      "severity": 3,
+      "createdAt": 1542108249383
+    }
+  ]
+  
+
+  
