@@ -1,16 +1,20 @@
 import { utilService } from './util.service.js'
 import fs from 'fs'
+import PDFDocument from 'pdfkit-table'
 
 export const bugService = {
   query,
   save,
   getById,
   remove,
+  generatePdf,
 }
 
 const bugs = utilService.readJsonFile('data/bugs.json')
 
 function query() {
+  console.log('Enter Query')
+
   return Promise.resolve(bugs)
 }
 
@@ -50,4 +54,28 @@ function _saveBugsToFile() {
       resolve()
     })
   })
+}
+
+function generatePdf(res) {
+  query().then(bugs => {
+    let doc = new PDFDocument({ margin: 30, size: 'A4' })
+
+    // res.setHeader('Content-Disposition', 'inline; filename="bugs.pdf"')
+    res.setHeader('Content-Disposition', 'attachment; filename="bugs.pdf"')
+    res.setHeader('Content-Type', 'application/pdf')
+
+    doc.pipe(res)
+
+    createPdf(doc, bugs).then(() => doc.end())
+  })
+}
+
+function createPdf(doc, bugs) {
+  const table = {
+    title: 'Bug Report',
+    headers: ['Title', 'Severity', 'Description'],
+    rows: bugs.map(bug => [bug.title, bug.severity, bug.description]),
+  }
+
+  return doc.table(table, { columnsSize: [200, 100, 200] })
 }

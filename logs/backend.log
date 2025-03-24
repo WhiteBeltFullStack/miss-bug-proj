@@ -13,3 +13,163 @@
 20.3.2025, 8:31:31 - INFO - Server ready at port 3030
 20.3.2025, 8:31:49 - INFO - Server ready at port 3030
 20.3.2025, 8:42:01 - INFO - Server ready at port 3030
+20.3.2025, 8:49:27 - INFO - Server ready at port 3030
+20.3.2025, 8:57:29 - INFO - Server ready at port 3030
+20.3.2025, 8:58:14 - INFO - Server ready at port 3030
+20.3.2025, 8:58:36 - INFO - Server ready at port 3030
+20.3.2025, 9:01:17 - INFO - Server ready at port 3030
+20.3.2025, 9:01:23 - INFO - Server ready at port 3030
+20.3.2025, 9:02:31 - INFO - Server ready at port 3030
+20.3.2025, 9:27:52 - INFO - Server ready at port 3030
+20.3.2025, 9:28:14 - INFO - Server ready at port 3030
+20.3.2025, 10:44:38 - INFO - Server ready at port 3030
+20.3.2025, 10:46:11 - INFO - Server ready at port 3030
+20.3.2025, 10:46:19 - INFO - Server ready at port 3030
+20.3.2025, 10:46:37 - INFO - visited bugs | saveseverity=30&_id=abc123
+20.3.2025, 10:46:37 - ERROR - Cannot get bug | cannot find bug - saveseverity=30&_id=abc123
+20.3.2025, 10:48:29 - INFO - visited bugs | saveseverity=2&_id=abc123
+20.3.2025, 10:48:29 - ERROR - Cannot get bug | cannot find bug - saveseverity=2&_id=abc123
+20.3.2025, 10:52:48 - INFO - Server ready at port 3030
+20.3.2025, 10:52:51 - INFO - Server ready at port 3030
+20.3.2025, 10:55:13 - INFO - Server ready at port 3030
+20.3.2025, 10:58:33 - INFO - visited bugs | abc123
+20.3.2025, 10:58:36 - INFO - visited bugs | abc123
+20.3.2025, 10:58:38 - INFO - visited bugs | def456
+20.3.2025, 10:58:39 - INFO - visited bugs | ghi789
+20.3.2025, 10:58:42 - INFO - visited bugs | def456
+20.3.2025, 10:58:44 - INFO - visited bugs | jkl012
+20.3.2025, 10:58:58 - INFO - visited bugs | jkl012
+20.3.2025, 10:59:16 - INFO - visited bugs | abc123
+20.3.2025, 10:59:42 - INFO - visited bugs | abc123
+20.3.2025, 10:59:52 - INFO - visited bugs | abc123
+20.3.2025, 10:59:55 - INFO - visited bugs | abc123
+20.3.2025, 11:00:33 - INFO - visited bugs | abc123
+20.3.2025, 11:00:42 - INFO - visited bugs | def456
+20.3.2025, 11:00:46 - INFO - visited bugs | ghi789
+20.3.2025, 11:00:48 - INFO - visited bugs | jkl012
+20.3.2025, 11:00:52 - INFO - visited bugs | vwx234
+20.3.2025, 11:00:59 - INFO - visited bugs | vwx234
+20.3.2025, 11:01:01 - INFO - visited bugs | vwx234
+20.3.2025, 11:01:03 - INFO - visited bugs | vwx234
+20.3.2025, 11:01:05 - INFO - visited bugs | stu901
+20.3.2025, 11:01:06 - INFO - visited bugs | pqr678
+20.3.2025, 11:01:07 - INFO - visited bugs | mno345
+20.3.2025, 11:01:45 - INFO - Server ready at port 3030
+20.3.2025, 11:01:47 - INFO - visited bugs | mno345
+20.3.2025, 11:01:49 - INFO - visited bugs | abc123
+20.3.2025, 11:01:51 - INFO - visited bugs | def456
+20.3.2025, 11:01:53 - INFO - visited bugs | ghi789
+20.3.2025, 11:02:01 - INFO - visited bugs | jkl012
+20.3.2025, 11:02:03 - INFO - visited bugs | vwx234
+20.3.2025, 11:02:23 - INFO - Server ready at port 3030
+20.3.2025, 11:02:26 - INFO - visited bugs | abc123
+20.3.2025, 11:02:28 - INFO - visited bugs | def456
+20.3.2025, 11:02:29 - INFO - visited bugs | ghi789
+20.3.2025, 11:02:32 - INFO - visited bugs | ghi789
+20.3.2025, 11:02:34 - INFO - visited bugs | jkl012
+20.3.2025, 11:02:39 - INFO - visited bugs | vwx234
+20.3.2025, 11:02:45 - INFO - visited bugs | abc123
+20.3.2025, 11:02:48 - INFO - visited bugs | def456
+20.3.2025, 11:02:49 - INFO - visited bugs | ghi789
+20.3.2025, 11:03:01 - INFO - visited bugs | abc123
+20.3.2025, 11:03:02 - INFO - visited bugs | def456
+20.3.2025, 11:03:04 - INFO - visited bugs | ghi789
+20.3.2025, 11:03:32 - INFO - Server ready at port 3030
+20.3.2025, 11:03:34 - INFO - visited bugs | abc123
+20.3.2025, 11:03:35 - INFO - visited bugs | def456
+20.3.2025, 11:03:42 - INFO - visited bugs | ghi789
+20.3.2025, 11:05:42 - INFO - Server ready at port 3030
+20.3.2025, 11:05:44 - INFO - visited bugs | ghi789
+20.3.2025, 11:05:47 - INFO - visited bugs | abc123
+20.3.2025, 11:05:49 - INFO - visited bugs | def456
+20.3.2025, 11:05:50 - INFO - visited bugs | ghi789
+20.3.2025, 11:05:51 - INFO - visited bugs | jkl012
+20.3.2025, 11:05:59 - INFO - visited bugs | jkl012
+20.3.2025, 11:06:02 - INFO - Server ready at port 3030
+20.3.2025, 11:06:03 - INFO - Server ready at port 3030
+20.3.2025, 11:06:05 - INFO - visited bugs | abc123
+20.3.2025, 11:06:09 - INFO - visited bugs | def456
+20.3.2025, 11:06:11 - INFO - visited bugs | ghi789
+20.3.2025, 11:06:14 - INFO - visited bugs | jkl012
+20.3.2025, 11:06:19 - INFO - visited bugs | jkl012
+20.3.2025, 11:06:20 - INFO - visited bugs | jkl012
+20.3.2025, 11:06:21 - INFO - visited bugs | jkl012
+20.3.2025, 11:06:22 - INFO - visited bugs | vwx234
+20.3.2025, 11:06:24 - INFO - visited bugs | stu901
+20.3.2025, 11:06:25 - INFO - visited bugs | pqr678
+20.3.2025, 11:06:26 - INFO - visited bugs | mno345
+20.3.2025, 11:08:26 - INFO - visited bugs | abc123
+20.3.2025, 11:08:33 - INFO - visited bugs | def456
+20.3.2025, 11:08:38 - INFO - visited bugs | ghi789
+20.3.2025, 11:08:43 - INFO - visited bugs | jkl012
+20.3.2025, 11:12:09 - INFO - Server ready at port 3030
+20.3.2025, 11:26:32 - INFO - visited bugs | abc123
+20.3.2025, 11:26:34 - INFO - visited bugs | def456
+20.3.2025, 11:26:38 - INFO - visited bugs | ghi789
+20.3.2025, 11:26:39 - INFO - visited bugs | jkl012
+20.3.2025, 11:26:47 - INFO - visited bugs | jkl012
+20.3.2025, 12:34:37 - INFO - visited bugs | abc123
+23.3.2025, 12:35:47 - INFO - Server ready at port 3030
+23.3.2025, 12:36:01 - INFO - visited bugs | abc123
+23.3.2025, 12:51:26 - INFO - Server ready at port 3030
+23.3.2025, 12:53:42 - INFO - Server ready at port 3030
+23.3.2025, 12:53:58 - INFO - Server ready at port 3030
+23.3.2025, 12:54:28 - INFO - Server ready at port 3030
+23.3.2025, 12:56:42 - INFO - Server ready at port 3030
+23.3.2025, 12:58:25 - INFO - Server ready at port 3030
+23.3.2025, 12:58:40 - INFO - Server ready at port 3030
+23.3.2025, 12:59:55 - INFO - Server ready at port 3030
+23.3.2025, 13:00:00 - INFO - Server ready at port 3030
+23.3.2025, 13:03:39 - INFO - Server ready at port 3030
+23.3.2025, 13:03:46 - INFO - Server ready at port 3030
+23.3.2025, 13:04:36 - INFO - Server ready at port 3030
+23.3.2025, 13:06:53 - INFO - Server ready at port 3030
+23.3.2025, 13:07:21 - INFO - Server ready at port 3030
+24.3.2025, 9:05:28 - INFO - Server ready at port 3030
+24.3.2025, 11:07:38 - INFO - Server ready at port 3030
+24.3.2025, 11:07:44 - INFO - Server ready at port 3030
+24.3.2025, 11:07:46 - INFO - Server ready at port 3030
+24.3.2025, 11:08:41 - INFO - Server ready at port 3030
+24.3.2025, 11:09:11 - INFO - Server ready at port 3030
+24.3.2025, 11:10:13 - INFO - Server ready at port 3030
+24.3.2025, 11:10:38 - INFO - Server ready at port 3030
+24.3.2025, 11:11:10 - INFO - Server ready at port 3030
+24.3.2025, 11:17:02 - INFO - Server ready at port 3030
+24.3.2025, 11:17:39 - INFO - Server ready at port 3030
+24.3.2025, 11:23:09 - INFO - Server ready at port 3030
+24.3.2025, 11:25:45 - INFO - Server ready at port 3030
+24.3.2025, 11:28:23 - INFO - Server ready at port 3030
+24.3.2025, 11:28:57 - INFO - Server ready at port 3030
+24.3.2025, 11:34:42 - INFO - Server ready at port 3030
+24.3.2025, 11:36:05 - INFO - Server ready at port 3030
+24.3.2025, 11:37:08 - INFO - Server ready at port 3030
+24.3.2025, 11:37:23 - INFO - Server ready at port 3030
+24.3.2025, 11:37:31 - INFO - Server ready at port 3030
+24.3.2025, 11:38:28 - INFO - Server ready at port 3030
+24.3.2025, 11:40:28 - INFO - Server ready at port 3030
+24.3.2025, 11:41:17 - INFO - Server ready at port 3030
+24.3.2025, 11:41:42 - INFO - Server ready at port 3030
+24.3.2025, 11:41:56 - INFO - Server ready at port 3030
+24.3.2025, 11:42:03 - INFO - Server ready at port 3030
+24.3.2025, 11:42:07 - INFO - Server ready at port 3030
+24.3.2025, 11:42:31 - INFO - Server ready at port 3030
+24.3.2025, 11:42:36 - INFO - Server ready at port 3030
+24.3.2025, 13:13:10 - INFO - Server ready at port 3030
+24.3.2025, 13:13:31 - INFO - Server ready at port 3030
+24.3.2025, 13:15:12 - INFO - Server ready at port 3030
+24.3.2025, 13:16:08 - INFO - Server ready at port 3030
+24.3.2025, 13:17:25 - INFO - Server ready at port 3030
+24.3.2025, 13:20:50 - INFO - Server ready at port 3030
+24.3.2025, 13:21:40 - INFO - Server ready at port 3030
+24.3.2025, 13:22:40 - INFO - Server ready at port 3030
+24.3.2025, 13:25:01 - INFO - Server ready at port 3030
+24.3.2025, 13:27:36 - INFO - Server ready at port 3030
+24.3.2025, 13:29:39 - INFO - Server ready at port 3030
+24.3.2025, 13:29:40 - ERROR - Cannot get bugs | TypeError: bugs is not a function
+24.3.2025, 13:29:58 - INFO - Server ready at port 3030
+24.3.2025, 13:30:00 - INFO - Server ready at port 3030
+24.3.2025, 13:31:43 - INFO - visited bugs | def456
+24.3.2025, 13:31:45 - INFO - visited bugs | def456
+24.3.2025, 13:34:15 - INFO - Server ready at port 3030
+24.3.2025, 15:14:52 - INFO - Server ready at port 3030
+24.3.2025, 15:14:55 - INFO - Server ready at port 3030

@@ -46,12 +46,13 @@ function remove(bugId) {
 
 function save(bug) {
   const url = BASE_URL + 'save'
-  let queryParams = `severity=${bug.severity}`
+  let queryParams = `?severity=${bug.severity}`
   if (bug._id) queryParams += `&_id=${bug._id}`
+
   return axios
     .get(url + queryParams)
-    .then(res => res.data)
-    .then(err => {
+    .then(res => ({ ...bug, ...res.data }))
+    .catch(err => {
       console.log('err:', err)
     })
 }

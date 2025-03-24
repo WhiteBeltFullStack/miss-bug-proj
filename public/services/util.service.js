@@ -3,7 +3,8 @@ export const utilService = {
     makeLorem,
     getRandomIntInclusive,
     loadFromStorage,
-    saveToStorage
+    saveToStorage,
+    download
 }
 
 function makeId(length = 6) {
@@ -42,4 +43,18 @@ function loadFromStorage(keyDB) {
 function saveToStorage(keyDB, val) {
     const valStr = JSON.stringify(val)
     localStorage.setItem(keyDB, valStr)
+}
+
+function download(url, fileName) {
+    return new Promise((resolve, reject) => {
+        const file = fs.createWriteStream(fileName)
+        https.get(url, content => {
+            content.pipe(file)
+            file.on('error', reject)
+            file.on('finish', () => {
+                file.close()
+                resolve()
+            })
+        })
+    })
 }
