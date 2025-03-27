@@ -1,8 +1,6 @@
 import express from 'express'
 import cookieParser from 'cookie-parser'
 
- 
-
 import { bugService } from './services/bugService.js'
 import { loggerService } from './services/logger.service.js'
 
@@ -10,11 +8,19 @@ const app = express()
 
 app.use(express.static('public'))
 app.use(cookieParser())
+app.use(express.json())
 
 // LIST
 app.get('/api/bug', (req, res) => {
+  const filterBy = {
+    txt: req.query.txt || '',
+    minSeverity: req.query.minSeverity || 0,
+    pageIdx: +req.query.pageIdx,
+    sortBy: req.query.sortBy || 'severity',
+    sortDir: req.query.sortDir || -1,
+  }
   bugService
-    .query()
+    .query(filterBy)
     .then(bugs => res.send(bugs))
     .catch(err => {
       loggerService.error('Cannot get bugs', err)
@@ -22,26 +28,45 @@ app.get('/api/bug', (req, res) => {
     })
 })
 
-app.get('/api/bug/download',(req,res)=>{
+app.get('/api/bug/download', (req, res) => {
   bugService.generatePdf(res)
   // res.send('downloaded')
-  
 })
 
-// CREATE OR EDIT
+// CREATE
 
-app.get('/api/bug/save', (req, res) => {
-  const bugToSave = {
-    _id: req.query._id,
-    severity: +req.query.severity,
-  }
+app.post('/api/bug', (req, res) => {
+  // const bugToSave = {
+  //   _id: req.query._id,
+  //   severity: +req.query.severity,
+  // }
+
+  const bugToSave = req.body
 
   bugService
     .save(bugToSave)
     .then(bug => res.send(bug))
     .catch(err => {
-      loggerService.error('Cannot save bug', err)
-      res.status(500).send('Cannot load bugs')
+      loggerService.error('Cannot Add bug', err)
+      res.status(500).send('Cannot add bugs')
+    })
+})
+
+// EDIT or Update
+app.put('/api/bug/:bugId', (req, res) => {
+  // const bugToSave = {
+  //   _id: req.query._id,
+  //   severity: +req.query.severity,
+  // }
+
+  const bugToSave = req.body
+
+  bugService
+    .save(bugToSave)
+    .then(bug => res.send(bug))
+    .catch(err => {
+      loggerService.error('Cannot Update bug', err)
+      res.status(500).send('Cannot update bugs')
     })
 })
 
@@ -81,7 +106,7 @@ app.get('/api/bug/:bugId', (req, res) => {
 //   res.send('Hello Cookie')
 // })
 
-app.get('/api/bug/:bugId/remove', (req, res) => {
+app.delete('/api/bug/:bugId', (req, res) => {
   const { bugId } = req.params
 
   bugService

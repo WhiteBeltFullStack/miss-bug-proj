@@ -173,3 +173,100 @@
 24.3.2025, 13:34:15 - INFO - Server ready at port 3030
 24.3.2025, 15:14:52 - INFO - Server ready at port 3030
 24.3.2025, 15:14:55 - INFO - Server ready at port 3030
+27.3.2025, 8:44:15 - INFO - Server ready at port 3030
+27.3.2025, 8:44:59 - INFO - Server ready at port 3030
+27.3.2025, 8:47:00 - INFO - Server ready at port 3030
+27.3.2025, 8:50:01 - INFO - Server ready at port 3030
+27.3.2025, 8:50:52 - INFO - Server ready at port 3030
+27.3.2025, 8:54:31 - INFO - Server ready at port 3030
+27.3.2025, 8:56:57 - INFO - Server ready at port 3030
+27.3.2025, 8:57:08 - INFO - visited bugs | save
+27.3.2025, 8:57:08 - ERROR - Cannot get bug | cannot find bug - save
+27.3.2025, 9:02:24 - INFO - Server ready at port 3030
+27.3.2025, 9:02:26 - INFO - Server ready at port 3030
+27.3.2025, 9:05:25 - INFO - Server ready at port 3030
+27.3.2025, 9:05:52 - INFO - Server ready at port 3030
+27.3.2025, 9:10:15 - INFO - Server ready at port 3030
+27.3.2025, 9:11:01 - INFO - Server ready at port 3030
+27.3.2025, 9:13:10 - INFO - Server ready at port 3030
+27.3.2025, 9:13:47 - INFO - visited bugs | def456
+27.3.2025, 9:14:03 - INFO - visited bugs | RLfGS
+27.3.2025, 9:19:06 - INFO - Server ready at port 3030
+27.3.2025, 9:24:39 - INFO - visited bugs | def456
+27.3.2025, 9:36:38 - INFO - Server ready at port 3030
+27.3.2025, 9:40:30 - INFO - Server ready at port 3030
+27.3.2025, 9:55:22 - INFO - Server ready at port 3030
+27.3.2025, 9:56:05 - INFO - Server ready at port 3030
+27.3.2025, 9:58:32 - INFO - Server ready at port 3030
+27.3.2025, 9:58:46 - INFO - Server ready at port 3030
+27.3.2025, 9:59:37 - INFO - Server ready at port 3030
+27.3.2025, 9:59:51 - INFO - Server ready at port 3030
+27.3.2025, 10:00:33 - INFO - Server ready at port 3030
+27.3.2025, 10:02:12 - INFO - Server ready at port 3030
+27.3.2025, 10:07:31 - INFO - Server ready at port 3030
+27.3.2025, 10:08:43 - INFO - Server ready at port 3030
+27.3.2025, 10:08:45 - ERROR - Cannot get bugs | ReferenceError: cars is not defined
+27.3.2025, 10:09:14 - ERROR - Cannot get bugs | ReferenceError: cars is not defined
+27.3.2025, 10:09:16 - ERROR - Cannot get bugs | ReferenceError: cars is not defined
+27.3.2025, 10:10:51 - INFO - Server ready at port 3030
+27.3.2025, 10:10:55 - ERROR - Cannot get bugs | ReferenceError: cars is not defined
+27.3.2025, 10:11:01 - ERROR - Cannot get bugs | ReferenceError: cars is not defined
+27.3.2025, 10:11:19 - INFO - Server ready at port 3030
+27.3.2025, 10:11:43 - INFO - Server ready at port 3030
+27.3.2025, 10:12:51 - INFO - Server ready at port 3030
+27.3.2025, 10:13:53 - INFO - Server ready at port 3030
+27.3.2025, 10:15:16 - INFO - Server ready at port 3030
+27.3.2025, 10:15:24 - INFO - Server ready at port 3030
+27.3.2025, 10:16:05 - INFO - Server ready at port 3030
+27.3.2025, 10:16:23 - INFO - Server ready at port 3030
+27.3.2025, 10:17:21 - INFO - Server ready at port 3030
+27.3.2025, 10:19:22 - INFO - visited bugs | pageIdx=1
+27.3.2025, 10:19:22 - ERROR - Cannot get bug | cannot find bug - pageIdx=1
+27.3.2025, 10:19:27 - INFO - visited bugs | pageIdx=2
+27.3.2025, 10:19:27 - ERROR - Cannot get bug | cannot find bug - pageIdx=2
+27.3.2025, 10:20:59 - INFO - Server ready at port 3030
+27.3.2025, 10:24:31 - INFO - Server ready at port 3030
+27.3.2025, 10:24:37 - INFO - Server ready at port 3030
+27.3.2025, 10:27:20 - INFO - Server ready at port 3030
+27.3.2025, 13:03:20 - INFO - Server ready at port 3030
+27.3.2025, 13:08:51 - INFO - Server ready at port 3030
+27.3.2025, 13:25:04 - INFO - Server ready at port 3030
+27.3.2025, 13:25:39 - INFO - Server ready at port 3030
+27.3.2025, 13:29:40 - INFO - Server ready at port 3030
+27.3.2025, 13:29:58 - INFO - Server ready at port 3030
+27.3.2025, 13:30:20 - INFO - Server ready at port 3030
+27.3.2025, 13:32:38 - INFO - Server ready at port 3030
+27.3.2025, 13:44:37 - INFO - Server ready at port 3030
+27.3.2025, 13:46:17 - INFO - Server ready at port 3030
+27.3.2025, 13:46:33 - INFO - Server ready at port 3030
+27.3.2025, 13:46:42 - INFO - Server ready at port 3030
+27.3.2025, 13:47:03 - INFO - Server ready at port 3030
+27.3.2025, 13:47:11 - INFO - Server ready at port 3030
+27.3.2025, 13:47:22 - INFO - Server ready at port 3030
+27.3.2025, 13:47:38 - INFO - Server ready at port 3030
+27.3.2025, 13:47:44 - INFO - Server ready at port 3030
+27.3.2025, 13:48:19 - INFO - Server ready at port 3030
+27.3.2025, 13:48:27 - INFO - Server ready at port 3030
+27.3.2025, 13:49:05 - INFO - Server ready at port 3030
+27.3.2025, 13:49:15 - INFO - Server ready at port 3030
+27.3.2025, 13:49:22 - INFO - Server ready at port 3030
+27.3.2025, 13:50:34 - INFO - Server ready at port 3030
+27.3.2025, 13:50:41 - INFO - Server ready at port 3030
+27.3.2025, 13:53:19 - INFO - Server ready at port 3030
+27.3.2025, 13:53:42 - INFO - Server ready at port 3030
+27.3.2025, 13:54:18 - INFO - Server ready at port 3030
+27.3.2025, 13:54:37 - INFO - Server ready at port 3030
+27.3.2025, 13:54:59 - INFO - Server ready at port 3030
+27.3.2025, 13:55:15 - INFO - Server ready at port 3030
+27.3.2025, 13:55:22 - INFO - Server ready at port 3030
+27.3.2025, 13:55:31 - INFO - Server ready at port 3030
+27.3.2025, 13:55:35 - INFO - Server ready at port 3030
+27.3.2025, 13:56:03 - INFO - Server ready at port 3030
+27.3.2025, 13:56:13 - INFO - Server ready at port 3030
+27.3.2025, 13:56:32 - INFO - Server ready at port 3030
+27.3.2025, 13:57:04 - INFO - Server ready at port 3030
+27.3.2025, 13:57:10 - INFO - Server ready at port 3030
+27.3.2025, 14:15:59 - INFO - Server ready at port 3030
+27.3.2025, 14:16:32 - INFO - Server ready at port 3030
+27.3.2025, 14:17:06 - INFO - Server ready at port 3030
+27.3.2025, 14:33:51 - INFO - Server ready at port 3030

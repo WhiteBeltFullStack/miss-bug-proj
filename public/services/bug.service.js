@@ -17,17 +17,17 @@ export const bugService = {
 function query(filterBy) {
   // return storageService.query(STORAGE_KEY)
   return axios
-    .get(BASE_URL)
+    .get(BASE_URL, { params: filterBy })
     .then(res => res.data)
     .then(bugs => {
-      if (filterBy.txt) {
-        const regExp = new RegExp(filterBy.txt, 'i')
-        bugs = bugs.filter(bug => regExp.test(bug.title))
-      }
+      // if (filterBy.txt) {
+      //   const regExp = new RegExp(filterBy.txt, 'i')
+      //   bugs = bugs.filter(bug => regExp.test(bug.title))
+      // }
 
-      if (filterBy.minSeverity) {
-        bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
-      }
+      // if (filterBy.minSeverity) {
+      //   bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
+      // }
 
       return bugs
     })
@@ -41,20 +41,32 @@ function getById(bugId) {
 }
 
 function remove(bugId) {
-  return axios.get(BASE_URL + bugId + '/remove').then(res => res.data)
+  return axios.delete(BASE_URL + bugId).then(res => res.data)
 }
 
 function save(bug) {
-  const url = BASE_URL + 'save'
-  let queryParams = `?severity=${bug.severity}`
-  if (bug._id) queryParams += `&_id=${bug._id}`
-
-  return axios
-    .get(url + queryParams)
-    .then(res => ({ ...bug, ...res.data }))
-    .catch(err => {
-      console.log('err:', err)
-    })
+  //will be sent in a body of request
+  const url = BASE_URL
+  // let queryParams = `?severity=${bug.severity}`
+  console.log('bug:', bug)
+  if (bug._id) {
+    // queryParams += `&_id=${bug._id}`
+    return axios
+      .put(url + bug._id, bug) //The second parameter is what sent in the body of req
+      .then(res => ({ ...bug, ...res.data }))
+      .catch(err => {
+        console.log('err:', err)
+        throw err
+      })
+  } else {
+    return axios
+      .post(url, bug) //The second parameter is what sent in the body of req
+      .then(res => ({ ...bug, ...res.data }))
+      .catch(err => {
+        console.log('err:', err)
+        throw err
+      })
+  }
 }
 
 function _createBugs() {
@@ -87,5 +99,5 @@ function _createBugs() {
 }
 
 function getDefaultFilter() {
-  return { txt: '', minSeverity: 0 }
+  return { txt: '', minSeverity: 0, pageIdx: 0,sortBy:'severity',sortDir:1 }
 }

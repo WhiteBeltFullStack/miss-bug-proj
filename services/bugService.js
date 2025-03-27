@@ -11,18 +11,50 @@ export const bugService = {
 }
 
 const bugs = utilService.readJsonFile('data/bugs.json')
+const PAGE_SIZE = 3
 
-function query() {
-  console.log('Enter Query')
+function query(filterBy) {
+  console.log('filterBy:',filterBy)
+  return Promise.resolve(bugs).then(bugs => {
+    if (filterBy.txt) {
+      const regExp = new RegExp(filterBy.txt, 'i')
+      bugs = bugs.filter(bug => regExp.test(bug.title))
+    }
 
-  return Promise.resolve(bugs)
+    if (filterBy.minSeverity) {
+      bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
+    }
+
+    if (filterBy.sortBy) {
+      const dir = +filterBy.sortDir === 1 ? -1 : 1
+
+      bugs.sort((bugA, bugB) => {
+        if (filterBy.sortBy === 'title') {
+          return bugA.title.localeCompare(bugB.title) * dir
+        } else if (filterBy.sortBy === 'severity') {
+          return (bugA.severity - bugB.severity) * dir
+        }
+        return 0
+      })
+    }
+
+    if (filterBy.pageIdx !== undefined && !isNaN(filterBy.pageIdx)) {
+      const startIdx = filterBy.pageIdx * PAGE_SIZE
+      bugs = bugs.slice(startIdx, startIdx + PAGE_SIZE)
+    }
+
+    return bugs
+  })
 }
 
 function save(bugToSave) {
   if (bugToSave._id) {
     const bugIdx = bugs.findIndex(bug => bug._id === bugToSave._id)
-    console.log('bugIdx:', bugIdx)
-    bugs[bugIdx] = { ...bugs[bugIdx], severity: bugToSave.severity }
+    // bugs[bugIdx] = { ...bugs[bugIdx], severity: bugToSave.severity }
+    bugs[bugIdx] = { ...bugs[bugIdx], ...bugToSave }
+
+    //option 2 Dirrectly change nessery field
+    // bugs[bugIdx].severity = bugToSave.severity
   } else {
     bugToSave._id = utilService.makeId()
     bugs.unshift(bugToSave)

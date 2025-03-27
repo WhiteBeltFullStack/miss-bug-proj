@@ -66,6 +66,10 @@ export function BugIndex() {
     setFilterBy(prevFilter => ({ ...prevFilter, ...filterBy }))
   }
 
+  function onSetPage(diff){
+    setFilterBy(prevFilter =>({...prevFilter,pageIdx: prevFilter.pageIdx + diff}))
+  }
+if(!bugs) return 'loading bugs'
   return (
     <section className="bug-index main-content">
       <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} />
@@ -74,13 +78,19 @@ export function BugIndex() {
         <section>
           <button onClick={onAddBug}>Add Bug</button>
           <button>
-            <a href="/api/bug/download" >DownLoad</a>  {/*<a href="/api/bug/download" target="_blank">DownLoad</a> */}
-
+            <a href="/api/bug/download">DownLoad</a>{' '}
+            {/*<a href="/api/bug/download" target="_blank">DownLoad</a> */}
           </button>
         </section>
       </header>
 
       <BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} />
+
+      <section>
+        <button disabled={filterBy.pageIdx===0} onClick={()=>{onSetPage(-1)}}>Prev</button>
+        <span>{filterBy.pageIdx + 1}</span>
+        <button disabled={filterBy.pageIdx >= Math.ceil(bugs.length)} onClick={()=>{onSetPage(1)}}>Next</button>
+      </section>
     </section>
   )
 }

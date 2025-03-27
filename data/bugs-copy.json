@@ -1,75 +1,82 @@
 [
-    {
-      "_id": "abc123",
-      "title": "Cannot save a new car",
-      "description": "Problem when clicking Save",
-      "severity": 3,
-      "createdAt": 1542107359454
-    },
-    {
-      "_id": "def456",
-      "title": "Error loading dashboard",
-      "description": "Dashboard does not load after login",
-      "severity": 2,
-      "createdAt": 1542107458457
-    },
-    {
-      "_id": "ghi789",
-      "title": "Car image not displaying",
-      "description": "Car image is missing on the details page",
-      "severity": 1,
-      "createdAt": 1542107557319
-    },
-    {
-      "_id": "jkl012",
-      "title": "Search feature not working",
-      "description": "Search bar returns no results",
-      "severity": 4,
-      "createdAt": 1542107656191
-    },
-    {
-      "_id": "mno345",
-      "title": "Cannot update car details",
-      "description": "Error occurs when trying to edit car details",
-      "severity": 3,
-      "createdAt": 1542107754973
-    },
-    {
-      "_id": "pqr678",
-      "title": "Add to cart button not responding",
-      "description": "Clicking Add to Cart does nothing",
-      "severity": 5,
-      "createdAt": 1542107853855
-    },
-    {
-      "_id": "stu901",
-      "title": "Profile picture upload failure",
-      "description": "Profile picture fails to upload after selecting a file",
-      "severity": 2,
-      "createdAt": 1542107952737
-    },
-    {
-      "_id": "vwx234",
-      "title": "Payment gateway not working",
-      "description": "Error when trying to process payment",
-      "severity": 4,
-      "createdAt": 1542108051619
-    },
-    {
-      "_id": "yzab567",
-      "title": "Car rental feature not visible",
-      "description": "Car rental option not appearing on the home page",
-      "severity": 1,
-      "createdAt": 1542108150501
-    },
-    {
-      "_id": "cdef890",
-      "title": "Slow loading times",
-      "description": "Pages take too long to load",
-      "severity": 3,
-      "createdAt": 1542108249383
-    }
-  ]
-  
-
-  
+  {
+    "_id": "abc123",
+    "title": "Cannot save a Car",
+    "description": "Problem when clicking Save",
+    "severity": 3,
+    "createdAt": 1542107359454,
+    "labels": ["critical", "need-CR", "dev-branch"]
+  },
+  {
+    "_id": "def456",
+    "title": "Error loading dashboard",
+    "description": "Dashboard does not load after login",
+    "severity": 2,
+    "createdAt": 1542107458457,
+    "labels": ["UI-bug", "high-priority", "backend"]
+  },
+  {
+    "_id": "ghi789",
+    "title": "Car image not displaying",
+    "description": "Car image is missing on the details page",
+    "severity": 1,
+    "createdAt": 1542107557319,
+    "labels": ["UI-bug", "low-priority", "frontend"]
+  },
+  {
+    "_id": "jkl012",
+    "title": "Search feature not working",
+    "description": "Search bar returns no results",
+    "severity": 4,
+    "createdAt": 1542107656191,
+    "labels": ["urgent", "database", "need-fix"]
+  },
+  {
+    "_id": "mno345",
+    "title": "Cannot update car details",
+    "description": "Error occurs when trying to edit car details",
+    "severity": 3,
+    "createdAt": 1542107754973,
+    "labels": ["backend", "form-validation", "bug"]
+  },
+  {
+    "_id": "pqr678",
+    "title": "Add to cart button not responding",
+    "description": "Clicking Add to Cart does nothing",
+    "severity": 5,
+    "createdAt": 1542107853855,
+    "labels": ["frontend", "button-issue", "high-priority"]
+  },
+  {
+    "_id": "stu901",
+    "title": "Profile picture upload failure",
+    "description": "Profile picture fails to upload after selecting a file",
+    "severity": 2,
+    "createdAt": 1542107952737,
+    "labels": ["file-upload", "need-CR", "bug"]
+  },
+  {
+    "_id": "vwx234",
+    "title": "Payment gateway not working",
+    "description": "Error when trying to process payment",
+    "severity": 4,
+    "createdAt": 1542108051619,
+    "labels": ["critical", "payment", "urgent"]
+  },
+  {
+    "_id": "yzab567",
+    "title": "Car rental feature not visible",
+    "description": "Car rental option not appearing on the home page",
+    "severity": 1,
+    "createdAt": 1542108150501,
+    "labels": ["feature-missing", "frontend", "low-priority"]
+  },
+  {
+    "_id": "cdef890",
+    "title": "Slow loading times",
+    "description": "Pages take too long to load",
+    "severity": 3,
+    "createdAt": 1542108249383,
+    "labels": ["performance", "optimization", "backend"]
+  }
+]
