@@ -1,69 +1,9 @@
 [
     {
-        "title": "Bug 1743862716530",
-        "severity": 444,
-        "_id": "FJc4w",
-        "owner": {
-            "_id": "u102",
-            "fullname": "Muki Ba",
-            "score": 100
-        }
-    },
-    {
-        "title": "Bug 1743862522555",
-        "severity": 200,
-        "_id": "CBVRU",
-        "owner": {
-            "_id": "u102",
-            "username": "bb",
-            "fullname": "Muki Ba",
-            "score": 100
-        }
-    },
-    {
-        "title": "Bug 1743862398423",
-        "severity": 33,
-        "_id": "wF3Xf",
-        "owner": {
-            "_id": "u101",
-            "username": "aa",
-            "fullname": "Puki Ja",
-            "score": 100
-        }
-    },
-    {
-        "title": "Bug 1743861386650",
-        "severity": 6,
-        "_id": "UMJOz",
-        "owner": {
-            "_id": "u101",
-            "username": "aa",
-            "fullname": "Puki Ja",
-            "score": 100
-        }
-    },
-    {
-        "_id": "u101",
-        "title": "Car image not displaying",
-        "description": "Car image is missing on the details page",
-        "severity": 1,
-        "createdAt": 1542107557319,
-        "labels": [
-            "UI-bug",
-            "low-priority",
-            "frontend"
-        ],
-        "owner": {
-            "_id": "u101",
-            "fullname": "Puki Ja"
-        }
-    },
-    {
-        "_id": "u102",
-        "title": "Car rental feature not visible",
-        "description": "Car rental option not appearing on the home page",
-        "severity": 1,
-        "createdAt": 1542108150501,
+        "title": "Sasha is a big  Bug",
+        "description": "User does not receive notifications after an action",
+        "severity": 50,
+        "createdAt": 1542108358271,
         "labels": [
             "feature-missing",
             "frontend",

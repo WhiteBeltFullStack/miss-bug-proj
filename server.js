@@ -6,6 +6,8 @@ import { bugService } from './services/bugService.js'
 import { loggerService } from './services/logger.service.js'
 import { userService } from './services/userService.js'
 import { authService } from './services/auth.service.js'
+import { userService } from './services/userService.js'
+import { authService } from './services/auth.service.js'
 
 const app = express()
 
@@ -14,6 +16,7 @@ app.use(cookieParser())
 app.use(express.json())
 
 // LIST
+
 
 app.get('/api/bug', (req, res) => {
   const filterBy = {
@@ -25,6 +28,9 @@ app.get('/api/bug', (req, res) => {
   }
   bugService
     .query(filterBy)
+    .then(({ bugs, totalCount, totalPages }) =>
+      res.send({ bugs, totalCount, totalPages })
+    )
     .then(({ bugs, totalCount, totalPages }) =>
       res.send({ bugs, totalCount, totalPages })
     )
@@ -49,9 +55,12 @@ app.post('/api/bug', (req, res) => {
 
   const loggedInUser = authService.validateToken(req.cookies.loginToken)
   if (!loggedInUser) return res.status(401).send('Cannot Add Bug')
+  const loggedInUser = authService.validateToken(req.cookies.loginToken)
+  if (!loggedInUser) return res.status(401).send('Cannot Add Bug')
   const bugToSave = req.body
 
   bugService
+    .save(bugToSave, loggedInUser)
     .save(bugToSave, loggedInUser)
     .then(bug => res.send(bug))
     .catch(err => {
@@ -119,11 +128,78 @@ app.delete('/api/bug/:bugId', (req, res) => {
 
   bugService
     .remove(bugId, loggedInUser)
+    .remove(bugId, loggedInUser)
     .then(() => res.send('bug removed'))
     .catch(err => {
       loggerService.error('Cannot remove bug', err)
       res.status(500).send('Cannot load bugs')
     })
+})
+
+//USER API
+
+app.get('/api/user', (req, res) => {
+  console.log('hello')
+
+  userService
+    .query()
+    .then(users => res.send(users))
+    .catch(err => {
+      loggerService.error('Cannot find users', err)
+      res.status(500).send('Cannot find users')
+    })
+})
+
+app.get('/api/user/:userId', (req, res) => {
+  const { userId } = req.params
+
+  userService
+    .getById(userId)
+    .then(user => res.send(user))
+    .catch(err => {
+      loggerService.error('Cannot find user', err)
+      res.status(500).send('Cannot find user')
+    })
+})
+
+//AUTH  API
+
+app.post('/api/auth/login', (req, res) => {
+  const credentials = req.body
+
+  authService
+    .checkLogin(credentials)
+    .then(user => {
+      const loginToken = authService.getLoginToken(user)
+      res.cookie('loginToken', loginToken)
+      res.send(user)
+    })
+    .catch(() => res.status(404).send('Invalid Credentials'))
+})
+
+app.post('/api/auth/signup', (req, res) => {
+  const credentials = req.body
+  userService
+    .add(credentials)
+    .then(user => {
+      if (user) {
+        const loginToken = authService.getLoginToken(user)
+        res.cookie('loginToken', loginToken)
+        res.send(user)
+      } else {
+        res.status(400).send('cannot signup')
+      }
+    })
+    .catch(() => res.status(400).send('Username taken.'))
+})
+
+app.post('/api/auth/logout', (req, res) => {
+  res.clearCookie('loginToken')
+  res.send('logged-out!')
+})
+
+app.get('/**', (req, res) => {
+  res.sendFile(path.resolve('public/index.html'))
 })
 
 //USER API
