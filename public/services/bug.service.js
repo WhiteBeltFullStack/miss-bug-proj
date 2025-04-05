@@ -12,6 +12,7 @@ export const bugService = {
   save,
   remove,
   getDefaultFilter,
+  getEmptyBug,
 }
 
 function query(filterBy) {
@@ -104,5 +105,14 @@ function getDefaultFilter() {
     pageIdx: undefined,
     sortBy: 'severity',
     sortDir: 1,
+  }
+}
+
+function getEmptyBug() {
+  return {
+    title: 'Sasha is a big  Bug',
+    description: 'User does not receive notifications after an action',
+    severity: utilService.getRandomIntInclusive(1, 10),
+    createdAt: Date.now(),
   }
 }

@@ -1,8 +1,21 @@
 [
     {
-        "title": "Sasha is a big  Bug",
+        "title": "Sasha Eat Wrong Spagheti",
         "description": "User does not receive notifications after an action",
-        "severity": 50,
+        "severity": 545,
+        "createdAt": 1743873556078,
+        "_id": "jYuLr",
+        "owner": {
+            "_id": "u102",
+            "fullname": "Muki Ba",
+            "score": 100
+        }
+    },
+    {
+        "_id": "u102",
+        "title": "Sasha BUG",
+        "description": "User does not receive notifications after an action",
+        "severity": 1000,
         "createdAt": 1542108358271,
         "labels": [
             "feature-missing",

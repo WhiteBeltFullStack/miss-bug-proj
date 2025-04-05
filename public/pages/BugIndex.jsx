@@ -1,4 +1,5 @@
 const { useState, useEffect } = React
+const { Link } = ReactRouterDOM
 
 import { bugService } from '../services/bug.service.js'
 import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
@@ -8,7 +9,7 @@ import { BugList } from '../cmps/BugList.jsx'
 import { authService } from '../services/auth.service.js'
 
 export function BugIndex() {
-const loggedInUser = authService.getLoggedInUser()
+  const loggedInUser = authService.getLoggedInUser()
 
   const [bugs, setBugs] = useState(null)
   const [filterBy, setFilterBy] = useState(bugService.getDefaultFilter())
@@ -39,37 +40,37 @@ const loggedInUser = authService.getLoggedInUser()
       .catch(err => showErrorMsg(`Cannot remove bug`, err))
   }
 
-  function onAddBug() {
-    const bug = {
-      title: prompt('Bug title?', 'Bug ' + Date.now()),
-      severity: +prompt('Bug severity?', 3),
-    }
+  // function onAddBug() {
+  //   const bug = {
+  //     title: prompt('Bug title?', 'Bug ' + Date.now()),
+  //     severity: +prompt('Bug severity?', 3),
+  //   }
 
-    bugService
-      .save(bug)
-      .then(savedBug => {
-        setBugs([...bugs, savedBug])
-        showSuccessMsg('Bug added')
-      })
-      .catch(err => showErrorMsg(`Cannot add bug`, err))
-  }
+  //   bugService
+  //     .save(bug)
+  //     .then(savedBug => {
+  //       setBugs([...bugs, savedBug])
+  //       showSuccessMsg('Bug added')
+  //     })
+  //     .catch(err => showErrorMsg(`Cannot add bug`, err))
+  // }
 
-  function onEditBug(bug) {
-    const severity = +prompt('New severity?', bug.severity)
-    const bugToSave = { ...bug, severity }
+  // function onEditBug(bug) {
+  //   const severity = +prompt('New severity?', bug.severity)
+  //   const bugToSave = { ...bug, severity }
 
-    bugService
-      .save(bugToSave)
-      .then(savedBug => {
-        const bugsToUpdate = bugs.map(currBug =>
-          currBug._id === savedBug._id ? savedBug : currBug
-        )
+  //   bugService
+  //     .save(bugToSave)
+  //     .then(savedBug => {
+  //       const bugsToUpdate = bugs.map(currBug =>
+  //         currBug._id === savedBug._id ? savedBug : currBug
+  //       )
 
-        setBugs(bugsToUpdate)
-        showSuccessMsg('Bug updated')
-      })
-      .catch(err => showErrorMsg('Cannot update bug', err))
-  }
+  //       setBugs(bugsToUpdate)
+  //       showSuccessMsg('Bug updated')
+  //     })
+  //     .catch(err => showErrorMsg('Cannot update bug', err))
+  // }
 
   function onSetFilterBy(filterBy) {
     setFilterBy(prevFilter => ({ ...prevFilter, ...filterBy }))
@@ -88,7 +89,12 @@ const loggedInUser = authService.getLoggedInUser()
       <header>
         <h3>Bug List</h3>
         <section>
-          {loggedInUser && <button onClick={onAddBug}>Add Bug</button>}
+          {loggedInUser && (
+            <Link to="/bug/edit">
+              <button >Add Bug</button>
+              {/* <button onClick={onAddBug}>Add Bug</button> */}
+            </Link>
+          )}
           <button>
             <a href="/api/bug/download">DownLoad</a>{' '}
             {/*<a href="/api/bug/download" target="_blank">DownLoad</a> */}
@@ -96,7 +102,8 @@ const loggedInUser = authService.getLoggedInUser()
         </section>
       </header>
 
-      <BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} />
+      {/* <BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} /> */}
+      <BugList bugs={bugs} onRemoveBug={onRemoveBug}/>
       <label>
         Use Paging
         <input

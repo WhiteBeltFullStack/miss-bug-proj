@@ -13,6 +13,7 @@ import { AboutUs } from './pages/AboutUs.jsx'
 import { authService } from './services/auth.service.js'
 import { LoginSignup } from './pages/LoginSignup.jsx'
 import { UserDetails } from './pages/UserDetails.jsx'
+import { BugEdit } from './pages/BugEdit.jsx'
 
 export function App() {
   const [loggedInUser, setLoggedInUser] = useState(
@@ -32,6 +33,10 @@ export function App() {
             <Route path="/bug" element={<BugIndex />} />
             <Route path="/bug/:bugId" element={<BugDetails />} />
             <Route path="/about" element={<AboutUs />} />
+
+            <Route path="/bug/edit/:bugId" element={<BugEdit />} />
+            <Route path="/bug/edit" element={<BugEdit />} />
+
             <Route path="/user/:userId" element={<UserDetails />} />
             <Route
               path="/auth"
