@@ -83,8 +83,8 @@ app.put('/api/bug/:bugId', (req, res) => {
 app.get('/api/bug/:bugId', (req, res) => {
   const { bugId } = req.params
 
-  const loggedInUser = authService.validateToken(req.cookies.loginToken)
-  if (!loggedInUser) return res.status(401).send('Cannot Add Bug')
+  // const loggedInUser = authService.validateToken(req.cookies.loginToken)
+  // if (!loggedInUser) return res.status(401).send('Cannot Add Bug')
 
   let viewedBugs = req.cookies.viewedBugs
     ? JSON.parse(req.cookies.viewedBugs)
@@ -101,11 +101,13 @@ app.get('/api/bug/:bugId', (req, res) => {
   res.cookie('viewedBugs', JSON.stringify(viewedBugs), { maxAge: 1000 * 7 })
 
   bugService
-    .getById(bugId, loggedInUser)
+    .getById(bugId)
+    // .getById(bugId, loggedInUser)
     .then(bug => res.send(bug))
     .catch(err => {
+      console.log('err:',err)
       loggerService.error('Cannot get bug', err)
-      res.status(500).send('Cannot load bugs')
+      res.status(500).send('Cannot loadd bugs')
     })
 })
 
