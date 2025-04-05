@@ -1,29 +1,40 @@
 .bug-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 10px;
 
-    padding: 0;
-    list-style: none;
+  padding: 0;
+  list-style: none;
 }
 
 .bug-list li {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 
-    padding: .7em;
-    background-color: var(--bg1);
-    border-radius: .2em;
+  padding: 0.7em;
+  background-color: var(--bg1);
+  border-radius: 0.2em;
 
-    color: whitesmoke;
+  color: whitesmoke;
 }
 
 .bug-list .actions {
-    display: flex;
-    gap: .3em;
+  display: flex;
+  gap: 0.3em;
+  justify-content: space-between;
+  margin-top: auto;
 }
 
-.bug-list .actions button:last-child {
-    margin-inline-start: auto;
+.bug-list .actions div {
+  display: flex;
+  gap: 0.6em;
+  justify-content: space-between;
+}
+
+/* .bug-list .actions button:last-child {
+  margin-inline-start: auto;
+} */
+.bug-list .actions .details {
+  margin-inline-start: 0;
 }
