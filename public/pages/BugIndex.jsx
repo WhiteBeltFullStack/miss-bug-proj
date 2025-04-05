@@ -5,17 +5,26 @@ import { showSuccessMsg, showErrorMsg } from '../services/event-bus.service.js'
 
 import { BugFilter } from '../cmps/BugFilter.jsx'
 import { BugList } from '../cmps/BugList.jsx'
+import { authService } from '../services/auth.service.js'
 
 export function BugIndex() {
+const loggedInUser = authService.getLoggedInUser()
+
   const [bugs, setBugs] = useState(null)
   const [filterBy, setFilterBy] = useState(bugService.getDefaultFilter())
+  const [totalPages, setTotalPages] = useState(0)
+  const [totalCount, setTotalCount] = useState(0)
 
   useEffect(loadBugs, [filterBy])
 
   function loadBugs() {
     bugService
       .query(filterBy)
-      .then(setBugs)
+      .then(data => {
+        setBugs(data.bugs)
+        setTotalCount(data.totalCount)
+        setTotalPages(data.totalPages)
+      })
       .catch(err => showErrorMsg(`Couldn't load bugs - ${err}`))
   }
 
@@ -66,17 +75,20 @@ export function BugIndex() {
     setFilterBy(prevFilter => ({ ...prevFilter, ...filterBy }))
   }
 
-  function onSetPage(diff){
-    setFilterBy(prevFilter =>({...prevFilter,pageIdx: prevFilter.pageIdx + diff}))
+  function onSetPage(diff) {
+    setFilterBy(prevFilter => ({
+      ...prevFilter,
+      pageIdx: prevFilter.pageIdx + diff,
+    }))
   }
-if(!bugs) return 'loading bugs'
+  if (!bugs) return 'loading bugs'
   return (
     <section className="bug-index main-content">
       <BugFilter filterBy={filterBy} onSetFilterBy={onSetFilterBy} />
       <header>
         <h3>Bug List</h3>
         <section>
-          <button onClick={onAddBug}>Add Bug</button>
+          {loggedInUser && <button onClick={onAddBug}>Add Bug</button>}
           <button>
             <a href="/api/bug/download">DownLoad</a>{' '}
             {/*<a href="/api/bug/download" target="_blank">DownLoad</a> */}
@@ -85,11 +97,40 @@ if(!bugs) return 'loading bugs'
       </header>
 
       <BugList bugs={bugs} onRemoveBug={onRemoveBug} onEditBug={onEditBug} />
+      <label>
+        Use Paging
+        <input
+          type="checkbox"
+          onChange={ev => {
+            setFilterBy(prevFilter => ({
+              ...prevFilter,
+              pageIdx: ev.target.checked ? 0 : undefined,
+            }))
+          }}
+        />
+      </label>
 
-      <section>
-        <button disabled={filterBy.pageIdx===0} onClick={()=>{onSetPage(-1)}}>Prev</button>
-        <span>{filterBy.pageIdx + 1}</span>
-        <button disabled={filterBy.pageIdx >= Math.ceil(bugs.length)} onClick={()=>{onSetPage(1)}}>Next</button>
+      <section hidden={filterBy.pageIdx === undefined}>
+        <button
+          disabled={filterBy.pageIdx === 0}
+          onClick={() => {
+            onSetPage(-1)
+          }}
+        >
+          Prev
+        </button>
+        <span>
+          {' '}
+          {filterBy.pageIdx + 1} / {totalPages}
+        </span>
+        <button
+          disabled={filterBy.pageIdx >= totalPages - 1}
+          onClick={() => {
+            onSetPage(1)
+          }}
+        >
+          Next
+        </button>
       </section>
     </section>
   )

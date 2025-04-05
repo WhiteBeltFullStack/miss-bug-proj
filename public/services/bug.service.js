@@ -28,7 +28,6 @@ function query(filterBy) {
       // if (filterBy.minSeverity) {
       //   bugs = bugs.filter(bug => bug.severity >= filterBy.minSeverity)
       // }
-
       return bugs
     })
 }
@@ -99,5 +98,11 @@ function _createBugs() {
 }
 
 function getDefaultFilter() {
-  return { txt: '', minSeverity: 0, pageIdx: 0,sortBy:'severity',sortDir:1 }
+  return {
+    txt: '',
+    minSeverity: 0,
+    pageIdx: undefined,
+    sortBy: 'severity',
+    sortDir: 1,
+  }
 }

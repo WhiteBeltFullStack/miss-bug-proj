@@ -1,102 +1,65 @@
 [
     {
-        "title": "Sasha is a big  Bug",
-        "description": "User does not receive notifications after an action",
+        "title": "Bug 1743862716530",
+        "severity": 444,
+        "_id": "FJc4w",
+        "owner": {
+            "_id": "u102",
+            "fullname": "Muki Ba",
+            "score": 100
+        }
+    },
+    {
+        "title": "Bug 1743862522555",
+        "severity": 200,
+        "_id": "CBVRU",
+        "owner": {
+            "_id": "u102",
+            "username": "bb",
+            "fullname": "Muki Ba",
+            "score": 100
+        }
+    },
+    {
+        "title": "Bug 1743862398423",
         "severity": 50,
-        "createdAt": 1542108358271,
-        "labels": [
-            "frontend",
-            "missing-feature",
-            "medium-priority"
-        ],
-        "_id": "NzDeC"
+        "_id": "wF3Xf",
+        "owner": {
+            "_id": "u101",
+            "username": "aa",
+            "fullname": "Puki Ja",
+            "score": 100
+        }
     },
     {
-        "_id": "def456",
-        "title": "Error loading dashboard",
-        "description": "Dashboard does not load after login",
+        "title": "Bug 1743861386650",
         "severity": 6,
-        "createdAt": 1542107458457,
-        "labels": [
-            "UI-bug",
-            "high-priority",
-            "backend"
-        ]
+        "_id": "UMJOz",
+        "owner": {
+            "_id": "u101",
+            "username": "aa",
+            "fullname": "Puki Ja",
+            "score": 100
+        }
     },
     {
-        "_id": "ghi789",
+        "_id": "u101",
         "title": "Car image not displaying",
         "description": "Car image is missing on the details page",
-        "severity": 6,
+        "severity": 1,
         "createdAt": 1542107557319,
         "labels": [
             "UI-bug",
             "low-priority",
             "frontend"
-        ]
+        ],
+        "owner": {
+            "_id": "u101",
+            "fullname": "Puki Ja"
+        }
     },
     {
-        "_id": "jkl012",
-        "title": "Search feature not working",
-        "description": "Search bar returns no results",
-        "severity": 4,
-        "createdAt": 1542107656191,
-        "labels": [
-            "urgent",
-            "database",
-            "need-fix"
-        ]
-    },
-    {
-        "_id": "mno345",
-        "title": "Cannot update car details",
-        "description": "Error occurs when trying to edit car details",
-        "severity": 3,
-        "createdAt": 1542107754973,
-        "labels": [
-            "backend",
-            "form-validation",
-            "bug"
-        ]
-    },
-    {
-        "_id": "pqr678",
-        "title": "Add to cart button not responding",
-        "description": "Clicking Add to Cart does nothing",
-        "severity": 5,
-        "createdAt": 1542107853855,
-        "labels": [
-            "frontend",
-            "button-issue",
-            "high-priority"
-        ]
-    },
-    {
-        "_id": "stu901",
-        "title": "Profile picture upload failure",
-        "description": "Profile picture fails to upload after selecting a file",
-        "severity": 2,
-        "createdAt": 1542107952737,
-        "labels": [
-            "file-upload",
-            "need-CR",
-            "bug"
-        ]
-    },
-    {
-        "_id": "vwx234",
-        "title": "Payment gateway not working",
-        "description": "Error when trying to process payment",
-        "severity": 4,
-        "createdAt": 1542108051619,
-        "labels": [
-            "critical",
-            "payment",
-            "urgent"
-        ]
-    },
-    {
-        "_id": "yzab567",
+        "_id": "u102",
         "title": "Car rental feature not visible",
         "description": "Car rental option not appearing on the home page",
         "severity": 1,
@@ -105,18 +68,154 @@
             "feature-missing",
             "frontend",
             "low-priority"
-        ]
+        ],
+        "owner": {
+            "_id": "u102",
+            "fullname": "Muki Ba"
+        }
     },
     {
-        "_id": "cdef890",
+        "_id": "6iykr",
+        "title": "Error loading dashboard",
+        "description": "Dashboard does not load after login",
+        "severity": 2,
+        "createdAt": 1542107458457,
+        "labels": [
+            "UI-bug",
+            "high-priority",
+            "backend"
+        ],
+        "owner": {
+            "_id": "6iykr",
+            "fullname": "Kiki Ki"
+        }
+    },
+    {
+        "_id": "XtFoM",
+        "title": "Profile picture upload failure",
+        "description": "Profile picture fails to upload after selecting a file",
+        "severity": 2,
+        "createdAt": 1542107952737,
+        "labels": [
+            "file-upload",
+            "need-CR",
+            "bug"
+        ],
+        "owner": {
+            "_id": "XtFoM",
+            "fullname": "AA aa"
+        }
+    },
+    {
+        "_id": "6RyQp",
+        "title": "Cannot save a Car",
+        "description": "Problem when clicking Save",
+        "severity": 4,
+        "createdAt": 1542107359454,
+        "labels": [
+            "critical",
+            "need-CR",
+            "dev-branch"
+        ],
+        "owner": {
+            "_id": "6RyQp",
+            "fullname": "aaa"
+        }
+    },
+    {
+        "_id": "qLEdY",
+        "title": "Cannot update car details",
+        "description": "Error occurs when trying to edit car details",
+        "severity": 3,
+        "createdAt": 1542107754973,
+        "labels": [
+            "backend",
+            "form-validation",
+            "bug"
+        ],
+        "owner": {
+            "_id": "qLEdY",
+            "fullname": "Gugu Ga"
+        }
+    },
+    {
+        "_id": "tUZPy",
         "title": "Slow loading times",
         "description": "Pages take too long to load",
-        "severity": 3,
+        "severity": 2,
         "createdAt": 1542108249383,
         "labels": [
             "performance",
             "optimization",
             "backend"
-        ]
+        ],
+        "owner": {
+            "_id": "tUZPy",
+            "fullname": "Mumu Ma"
+        }
+    },
+    {
+        "_id": "wfawE",
+        "title": "Search feature not working",
+        "description": "Search bar returns no results",
+        "severity": 5,
+        "createdAt": 1542107656191,
+        "labels": [
+            "urgent",
+            "database",
+            "need-fix"
+        ],
+        "owner": {
+            "_id": "wfawE",
+            "fullname": "cc"
+        }
+    },
+    {
+        "_id": "GOtHH",
+        "title": "Payment gateway not working",
+        "description": "Error when trying to process payment",
+        "severity": 6,
+        "createdAt": 1542108051619,
+        "labels": [
+            "critical",
+            "payment",
+            "urgent"
+        ],
+        "owner": {
+            "_id": "GOtHH",
+            "fullname": "bob"
+        }
+    },
+    {
+        "_id": "tl3ps",
+        "title": "Add to cart button not responding",
+        "description": "Clicking Add to Cart does nothing",
+        "severity": 7,
+        "createdAt": 1542107853855,
+        "labels": [
+            "frontend",
+            "button-issue",
+            "high-priority"
+        ],
+        "owner": {
+            "_id": "tl3ps",
+            "fullname": "aa"
+        }
+    },
+    {
+        "_id": "Admin12345",
+        "title": "Admin panel access issue",
+        "description": "Admin is unable to access dashboard",
+        "severity": 1,
+        "createdAt": 1542108159999,
+        "labels": [
+            "admin",
+            "backend",
+            "critical"
+        ],
+        "owner": {
+            "_id": "Admin12345",
+            "fullname": "admin"
+        }
     }
 ]

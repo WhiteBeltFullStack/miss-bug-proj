@@ -13,8 +13,7 @@ export const bugService = {
 const bugs = utilService.readJsonFile('data/bugs.json')
 const PAGE_SIZE = 3
 
-function query(filterBy) {
-  console.log('filterBy:',filterBy)
+function query(filterBy={}) {
   return Promise.resolve(bugs).then(bugs => {
     if (filterBy.txt) {
       const regExp = new RegExp(filterBy.txt, 'i')
@@ -38,25 +37,33 @@ function query(filterBy) {
       })
     }
 
+    const totalCount = bugs.length
+    const totalPages = Math.ceil(totalCount / PAGE_SIZE)
+
     if (filterBy.pageIdx !== undefined && !isNaN(filterBy.pageIdx)) {
       const startIdx = filterBy.pageIdx * PAGE_SIZE
       bugs = bugs.slice(startIdx, startIdx + PAGE_SIZE)
     }
 
-    return bugs
+    return { bugs, totalCount, totalPages }
   })
 }
 
-function save(bugToSave) {
+function save(bugToSave, loggedInUser) {
   if (bugToSave._id) {
     const bugIdx = bugs.findIndex(bug => bug._id === bugToSave._id)
+    if (!loggedInUser.isAdmin && bugs[bugIdx].owner._id !== loggedInUser._id) {
+      return Promise.reject('Im not your bug')
+    }
     // bugs[bugIdx] = { ...bugs[bugIdx], severity: bugToSave.severity }
     bugs[bugIdx] = { ...bugs[bugIdx], ...bugToSave }
 
     //option 2 Dirrectly change nessery field
     // bugs[bugIdx].severity = bugToSave.severity
   } else {
+    delete loggedInUser.username
     bugToSave._id = utilService.makeId()
+    bugToSave.owner = loggedInUser
     bugs.unshift(bugToSave)
   }
 
@@ -69,9 +76,12 @@ function getById(bugId) {
   return Promise.resolve(bug)
 }
 
-function remove(bugId) {
+function remove(bugId, loggedInUser) {
   const bugIdx = bugs.findIndex(bug => bug._id === bugId)
   if (bugIdx === -1) return Promise.reject('Cannot remove bug - ' + bugId)
+  if (!loggedInUser.isAdmin && bugs[bugIdx].owner._id !== loggedInUser._id) {
+    return Promise.reject('Im not your bug')
+  }
   bugs.splice(bugIdx, 1)
   return _saveBugsToFile()
 }
@@ -89,7 +99,7 @@ function _saveBugsToFile() {
 }
 
 function generatePdf(res) {
-  query().then(bugs => {
+  query().then(({bugs}) => {
     let doc = new PDFDocument({ margin: 30, size: 'A4' })
 
     // res.setHeader('Content-Disposition', 'inline; filename="bugs.pdf"')

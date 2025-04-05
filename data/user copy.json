@@ -1,0 +1,71 @@
+[
+  {
+    "_id": "u101",
+    "username": "aa",
+    "fullname": "Puki Ja",
+    "password": "aa",
+    "score": 100
+  },
+  {
+    "_id": "u102",
+    "username": "bb",
+    "fullname": "Muki Ba",
+    "password": "bb",
+    "score": 100
+  },
+  {
+    "username": "cc",
+    "password": "cc",
+    "fullname": "Kiki Ki",
+    "_id": "6iykr"
+  },
+  {
+    "username": "dd",
+    "password": "dd",
+    "fullname": "AA aa",
+    "_id": "XtFoM"
+  },
+  {
+    "username": "ee",
+    "password": "ee",
+    "fullname": "aaa",
+    "_id": "6RyQp"
+  },
+  {
+    "username": "ff",
+    "password": "ff",
+    "fullname": "Gugu Ga",
+    "_id": "qLEdY"
+  },
+  {
+    "username": "gg",
+    "password": "gg",
+    "fullname": "Mumu Ma",
+    "_id": "tUZPy"
+  },
+  {
+    "username": "hh",
+    "password": "hh",
+    "fullname": "cc",
+    "_id": "wfawE"
+  },
+  {
+    "username": "ii",
+    "password": "ii",
+    "fullname": "bob",
+    "_id": "GOtHH"
+  },
+  {
+    "username": "kk",
+    "password": "kk",
+    "fullname": "aa",
+    "_id": "tl3ps"
+  }
+  ,    {
+    "username": "admin",
+    "password": "admin",
+    "fullname": "admin",
+    "isAdmin": true,
+    "_id": "Admin12345"
+  }
+]
