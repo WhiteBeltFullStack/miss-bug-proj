@@ -1,0 +1,51 @@
+.bug-edit {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .bug-edit-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bug-edit-form label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .bug-edit-form input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .bug-edit-form input:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+  }
+  
+  .bug-edit-form .btn {
+    background-color: #000000;
+    color: white;
+    padding: 0.6rem 1rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .bug-edit-form .btn:hover {
+    background-color: #0056b3;
+  }
+  

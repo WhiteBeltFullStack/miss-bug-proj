@@ -60,17 +60,18 @@ export function BugEdit() {
 
   return (
     <section className="bug-edit">
-      <form action="" onSubmit={onSaveBug}>
-        <label htmlFor="title"></label>
+      <form className="bug-edit-form" onSubmit={onSaveBug}>
+        <label htmlFor="title">Title:</label>
         <input
           type="text"
           value={title}
           name="title"
           id="title"
           onChange={onHandleChange}
+          placeholder="Enter bug title"
         />
 
-        <label htmlFor="severity"></label>
+        <label htmlFor="severity">Severity:</label>
         <input
           type="number"
           value={severity}

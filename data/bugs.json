@@ -1,5 +1,17 @@
 [
     {
+        "title": "Huge Bug ",
+        "description": "User does not receive notifications after an action",
+        "severity": 1000,
+        "createdAt": 1743932019036,
+        "_id": "aMYr7",
+        "owner": {
+            "_id": "u102",
+            "fullname": "Muki Ba",
+            "score": 100
+        }
+    },
+    {
         "title": "Sasha Eat Wrong Spagheti",
         "description": "User does not receive notifications after an action",
         "severity": 545,
